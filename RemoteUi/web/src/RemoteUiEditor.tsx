@@ -15,7 +15,6 @@ import {
 import * as React from "react";
 import {inject, observer, Provider} from "mobx-react";
 import {SortableContainer, SortableElement, SortableHandle} from "react-sortable-hoc";
-// @ts-ignore
 import styles from "./styles/RemoteUiEditor.module.css";
 import {observable} from "mobx";
 
@@ -33,7 +32,7 @@ const Error = observer(function(props: {error: string|undefined|null})
 {
     if(props.error)
         return <div className={styles.remoteUiErrorString}>{props.error}</div>;
-    return null;    
+    return null;
 });
 
 const ExpandLink = observer(function (props: { item: { isExpanded: boolean}, children: any  }) {
